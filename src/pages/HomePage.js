@@ -2,7 +2,7 @@ import Directory from "../components/Directory";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className=" py-4">
       <Directory />
     </div>
   );
