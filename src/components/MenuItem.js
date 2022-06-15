@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 const MenuItem = ({ title, imageUrl }) => {
   return (
     <div className="h-[360px] min-w-[30%] border flex justify-center items-center overflow-clip">
-      <img className="h-[400px]  object-cover " src={imageUrl} alt="" />
+      <img className="h-[450px]  object-cover " src={imageUrl} alt="" />
       <NavLink
         to={`/shop/${title}`}
         className="flex flex-col justify-center items-center border px-10 py-4 space-y-2 bg-white bg-opacity-80 text-black hover:bg-opacity-100 absolute hover:cursor-pointer hover:scale-105 transition-all ease-out"
