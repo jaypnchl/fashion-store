@@ -33,7 +33,7 @@ class SignIn extends React.Component {
 
   render() {
     return (
-      <div className="w-[30vw]">
+      <div className="sm:w-[30vw] ">
         <h2 className="font-semibold text-xl my-2">
           I already have an account
         </h2>
