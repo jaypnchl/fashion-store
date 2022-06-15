@@ -41,7 +41,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="px-8 sm:px-[80px]">
+      <div className="px-[80px] sm:px-[80px]">
         <Header currentUser={this.state.currentUser} />
         <Routes>
           <Route path="/" element={<HomePage />} />
