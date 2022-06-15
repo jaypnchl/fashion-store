@@ -41,8 +41,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className=" grid grid-rows lg:grid-cols-3 gap-6">
-        {this.state.sections.map(({ id, title }) => (
-          <MenuItem key={id} title={title} />
+        {this.state.sections.map(({ id, title, imageUrl }) => (
+          <MenuItem key={id} title={title} imageUrl={imageUrl} />
         ))}
       </div>
     );
