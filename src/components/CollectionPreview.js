@@ -7,8 +7,8 @@ function CollectionPreview({ title, items, imageUrl }) {
       <div className="flex flex-col sm:flex-row sm:space-x-6 mb-8">
         {items
           .filter((item, idx) => idx < 4)
-          .map(({ id, ...otherProps }) => (
-            <CollectionItem key={id} {...otherProps} />
+          .map((item) => (
+            <CollectionItem key={item.id} item={item} />
           ))}
       </div>
     </div>
