@@ -4,10 +4,13 @@ import Header from "./components/Header";
 import HomePage from "./pages/HomePage";
 import Shop from "./pages/Shop";
 import SignInAndSignUp from "./pages/SignInAndSignUp";
+import CheckOut from "./pages/CheckOut";
 
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 import { setCurrentUser } from "./redux/user/UserAction";
 import { connect } from "react-redux";
+import { selectCurrentUser } from "./redux/user/UserSelector";
+import { createStructuredSelector } from "reselect";
 
 class App extends React.Component {
   unsubscribeFromAuth = null;
@@ -41,6 +44,7 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/checkout" element={<CheckOut />} />
           <Route
             path="/signin"
             element={
@@ -53,8 +57,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = ({ user }) => ({
-  currentUser: user.currentUser,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({
