@@ -16,7 +16,6 @@ function Header({ currentUser, hidden }) {
       </Link>
       <div className="flex items-center space-x-6 text-xl">
         <Link to="/shop">SHOP</Link>
-        <Link to="/shop">CONTACT</Link>
         {currentUser ? (
           <Link to="/signin" onClick={() => auth.signOut()}>
             SIGN OUT

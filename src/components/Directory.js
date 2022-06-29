@@ -1,52 +1,21 @@
 import React from "react";
 import MenuItem from "./MenuItem";
+import { connect } from "react-redux";
+import { selectDirectorySections } from "../redux/directory/DirectorySelector";
+import { createStructuredSelector } from "reselect";
 
-class Directory extends React.Component {
-  constructor() {
-    super();
+const Directory = ({ sections }) => {
+  return (
+    <div className=" grid grid-rows lg:grid-cols-3 gap-6">
+      {sections.map(({ id, title, imageUrl }) => (
+        <MenuItem key={id} title={title} imageUrl={imageUrl} />
+      ))}
+    </div>
+  );
+};
 
-    this.state = {
-      sections: [
-        {
-          title: "hats",
-          imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-          id: 1,
-        },
-        {
-          title: "jackets",
-          imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-          id: 2,
-        },
-        {
-          title: "sneakers",
-          imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-          id: 3,
-        },
-        {
-          title: "womens",
-          imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-          size: "lg",
-          id: 4,
-        },
-        {
-          title: "mens",
-          imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-          size: "lg",
-          id: 5,
-        },
-      ],
-    };
-  }
+const mapStateToProps = createStructuredSelector({
+  sections: selectDirectorySections,
+});
 
-  render() {
-    return (
-      <div className=" grid grid-rows lg:grid-cols-3 gap-6">
-        {this.state.sections.map(({ id, title, imageUrl }) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} />
-        ))}
-      </div>
-    );
-  }
-}
-
-export default Directory;
+export default connect(mapStateToProps)(Directory);

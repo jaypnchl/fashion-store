@@ -5,7 +5,7 @@ import { addItem } from "../redux/cart/CartAction";
 function CollectionItem({ item, addItem }) {
   const { name, price, imageUrl } = item;
   return (
-    <div className=" w-[400px] mb-6 relative ">
+    <div className=" w-[400px] mb-6 relative ml-6 ">
       <img
         className="h-[550px] w-[400px] min-w-[30%] min-h-[30%] object-cover"
         src={imageUrl}
