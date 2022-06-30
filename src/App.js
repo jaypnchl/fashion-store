@@ -39,7 +39,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="px-10 sm:px-[80px]">
+      <div className="px-14 sm:px-[80px]">
         <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />

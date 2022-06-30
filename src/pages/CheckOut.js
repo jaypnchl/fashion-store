@@ -17,10 +17,10 @@ function CheckOut({ cartItems, total }) {
         <div className="capitalize w-[23%] ">
           <span>Quantity</span>
         </div>
-        <div className="capitalize w-[15%] sm:w-[23%]">
+        <div className="capitalize w-[20%] sm:w-[23%]">
           <span>Price</span>
         </div>
-        <div className="capitalize w-[8%] ">
+        <div className="capitalize  w-[8%] ">
           <span>Remove</span>
         </div>
       </div>
