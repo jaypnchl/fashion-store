@@ -1,8 +1,6 @@
 import CustomButton from "./CustomButton";
 import { connect } from "react-redux";
 import { addItem } from "../redux/cart/CartAction";
-import { useState } from "react";
-import { useEffect } from "react";
 
 function CollectionItem({ item, addItem }) {
   const { name, price, imageUrl } = item;
