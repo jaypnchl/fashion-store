@@ -9,7 +9,7 @@ function CheckOutItem({ cartItem, clearItem, removeItem, addItem }) {
   const { name, imageUrl, price, quantity } = cartItem;
 
   return (
-    <div className="w-[100%]  min-h-[100px] py-[15px] flex items-center border-b border-gray-800 sm:text-[22px]">
+    <div className="w-[100%]  min-h-[100px] py-[15px] flex items-center border-b border-gray-800 text-sm sm:text-[22px]">
       <div className="w-[30%] sm:w-[23%] pr-6 sm:pr-10">
         <img className="w-[100%] h-[100%]" src={imageUrl} alt="item" />
       </div>

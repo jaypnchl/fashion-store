@@ -1,12 +1,15 @@
 import CustomButton from "./CustomButton";
 import { connect } from "react-redux";
 import { addItem } from "../redux/cart/CartAction";
+import { useState } from "react";
+import { useEffect } from "react";
 
 function CollectionItem({ item, addItem }) {
   const { name, price, imageUrl } = item;
+
   return (
     <div className=" w-[160px] ml-3 sm:w-[400px] mb-6 relative sm:ml-6">
-      <div className="absolute top-[200px] sm:top-[480px] flex w-full justify-center">
+      <div className="absolute top-[205px] sm:top-[480px] flex w-full justify-center">
         <CustomButton onClick={() => addItem(item)} inverted>
           Add to cart
         </CustomButton>

@@ -6,21 +6,21 @@ import StripeCheckoutButton from "../components/StripeButton";
 
 function CheckOut({ cartItems, total }) {
   return (
-    <div className=" sm:w-[55%]  mx-2 min-h-[90vh] flex flex-col items-center my-[50px] sm:mx-auto">
-      <div className="w-[100%] h-[40px] flex justify-between border-b border-gray-800 text-sm sm:text-lg">
-        <div className="capitalize w-[25%] sm:w-[23%]">
+    <div className=" sm:w-[55%] mx-1 min-h-[90vh] flex flex-col items-center my-[50px] sm:mx-auto">
+      <div className="w-[100%] h-[40px] flex justify-between border-b border-gray-800 text-[12px] sm:text-lg">
+        <div className="capitalize w-[23%]">
           <span>Product</span>
         </div>
-        <div className="capitalize w-[23%] ">
+        <div className="capitalize w-[23%]">
           <span>Description</span>
         </div>
-        <div className="capitalize w-[23%] ">
+        <div className="capitalize w-[20%] sm:w-[23%] ">
           <span>Quantity</span>
         </div>
-        <div className="capitalize w-[20%] sm:w-[23%]">
+        <div className="capitalize w-[15%] sm:w-[23%]">
           <span>Price</span>
         </div>
-        <div className="capitalize  w-[8%] ">
+        <div className="capitalize w-[10%] sm:w-[8%] ">
           <span>Remove</span>
         </div>
       </div>
