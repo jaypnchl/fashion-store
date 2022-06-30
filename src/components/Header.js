@@ -14,7 +14,7 @@ function Header({ currentUser, hidden }) {
       <Link to="/">
         <Logo />
       </Link>
-      <div className="flex items-center space-x-6 text-xl">
+      <div className="flex items-center space-x-6 sm:text-xl font-semibold">
         <Link to="/shop">SHOP</Link>
         {currentUser ? (
           <Link to="/signin" onClick={() => auth.signOut()}>
